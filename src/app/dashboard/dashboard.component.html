@@ -1,0 +1,9 @@
+<ActionBar title="My Tracked Stocks"></ActionBar>
+
+<GridLayout rows="auto,*">
+    <RadListView row=0 [items]="stockList">
+        <ng-template let-item="item">
+            <Label [text]="item.name" class="p-15"></Label>
+          </ng-template>
+    </RadListView>
+</GridLayout>
