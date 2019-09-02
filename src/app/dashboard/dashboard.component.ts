@@ -11,7 +11,9 @@ import {Stock} from "../shared/stock/stock.model";
 export class DashboardComponent implements OnInit {
     stockList: Array<Stock> = [];
     ngOnInit(): void {
-        throw new Error("Method not implemented.");
+        this.stockList = new Array<Stock>(
+            { id: 'Int', name: "Intel" },
+            { id: 'Nvd', name: "Nvidia"})
     }
     
 }
