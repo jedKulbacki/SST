@@ -8,16 +8,16 @@
   
   .bottom-navigation .bottom-navigation-item .icon,
   .bottom-navigation .bottom-navigation-item .label {
-    color: #C1C1C1;
+    color: black;
   }
   
   .bottom-navigation .bottom-navigation-item .icon {
-    font-size: 20;
+    font-size: 20rem;
     margin-bottom: 2;
   }
   
   .bottom-navigation .bottom-navigation-item .label {
-    font-size: 10;
+    font-size: 15rem;
   }
   
   .bottom-navigation .bottom-navigation-item.selected .icon,
@@ -26,7 +26,7 @@
   }
   
   .bottom-navigation GridLayout {
-    margin: 10;
+    margin: 5;
   }
   
   

@@ -8,6 +8,7 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { StockDetailComponent } from "./shared/stock/stock-detial.component";
 import { BottomNavigationComponent } from "./shared/navigation/bottom-navigation.component";
+import { SearchComponent } from "./shared/search/search.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -29,7 +30,8 @@ import { BottomNavigationComponent } from "./shared/navigation/bottom-navigation
         ItemDetailComponent,
         StockDetailComponent,
         DashboardComponent,
-        BottomNavigationComponent
+        BottomNavigationComponent,
+        SearchComponent
     ],
     providers: [],
     schemas: [
