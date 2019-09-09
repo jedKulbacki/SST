@@ -2,5 +2,5 @@
     <Label text="Add Stock" class="action-bar-label" ></Label>
 </ActionBar>
 <StackLayout class="page">
-    <SearchBar hint="Find Stock Code" (clear)="onClear($event)" (textChange)="onTextChange($event)" class="search-bar"></SearchBar>
+    <SearchBar hint="Find Stock Code" (clear)="onClear($event)" (submit)="onSubmit($event)" (textChange)="this.searchUpdate.next($event)" class="search-bar"></SearchBar>
 </StackLayout>
