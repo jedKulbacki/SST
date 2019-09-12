@@ -12,8 +12,8 @@ export class DashboardComponent implements OnInit {
     stockList: Array<Stock> = [];
     ngOnInit(): void {
         this.stockList = new Array<Stock>(
-            { id: 'Int', name: "Intel" },
-            { id: 'Nvd', name: "Nvidia"})
+            { symbol: 'Int', price: 11 },
+            { symbol: 'Nvd', price: 11})
     }
     
 }
