@@ -1,4 +1,7 @@
 .cardStyle {
-    background-color: #3489db;
-    color: #fff;
+    background-color: #c1c7ff;
+    color: #22292f;
   }
+.bolded {
+  font-weight: bold;
+}

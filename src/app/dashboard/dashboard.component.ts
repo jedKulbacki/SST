@@ -11,9 +11,6 @@ import {Stock} from "../shared/stock/stock.model";
 export class DashboardComponent implements OnInit {
     stockList: Array<Stock> = [];
     ngOnInit(): void {
-        this.stockList = new Array<Stock>(
-            { symbol: 'Int', price: 11 },
-            { symbol: 'Nvd', price: 11})
     }
     
 }
