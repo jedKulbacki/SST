@@ -1,7 +1,7 @@
 <GridLayout columns="*, *, *" height="8%" row="1" class="bottom-navigation">
-	<GridLayout col="0" rows="auto, *" class="bottom-navigation-item">
-        <Label row="0" text="&#xf013;" class="fas"></Label>
-        <Label row="1" text="Settings" class="label"></Label>
+	<GridLayout col="0" rows="auto, *" class="bottom-navigation-item" (tap)="onNavItemTap('/dashboard')">
+        <Label row="0" text="&#xf015;" class="fas"></Label>
+        <Label row="1" text="Home" class="label"></Label>
     </GridLayout>
 
     <GridLayout col="1" rows="auto, *" class="bottom-navigation-item">

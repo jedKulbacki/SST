@@ -16,6 +16,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { SearchService } from "./shared/search/search.service";
+import { StockService } from "./shared/stock/stock.service";
 
 @NgModule({
     bootstrap: [
@@ -37,7 +38,9 @@ import { SearchService } from "./shared/search/search.service";
         SearchComponent,
         StockCardComponent
     ],
-    providers: [SearchService],
+    providers: [
+        SearchService,
+        StockService],
     schemas: [
         NO_ERRORS_SCHEMA
     ]

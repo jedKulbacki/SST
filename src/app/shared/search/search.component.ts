@@ -17,9 +17,11 @@ export class SearchComponent{
     searchUpdate: Subject<string>;
     stockToAdd: Stock;
     isStockFound: boolean;
+    isAdd: boolean;
     constructor(private searchService: SearchService){
         this.searchUpdate = new Subject<string>();
         this.isStockFound = false;
+        this.isAdd = true;
     }
     
     ngAfterViewInit(){

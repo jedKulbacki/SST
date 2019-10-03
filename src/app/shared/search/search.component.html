@@ -3,7 +3,7 @@
 </ActionBar>
 <StackLayout orientation="vertical">
     <SearchBar hint="Find Stock Code" (clear)="onClear($event)" (submit)="onSubmit($event)" (textChange)="this.searchUpdate.next($event)" class="search-bar"></SearchBar>
-    <stock-card *ngIf="isStockFound" [(stock)]="stockToAdd"></stock-card>
+    <stock-card *ngIf="isStockFound" [(stock)]="stockToAdd" [(showAddBtn)]="isAdd"></stock-card>
 </StackLayout>
    
       

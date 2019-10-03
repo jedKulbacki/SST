@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient, HttpParams }  from "@angular/common/http";
-import { stockResult } from "../stock/stock-interface.model";
+import { Stock } from "../stock/stock.model";
 
 @Injectable()
 export class SearchService {

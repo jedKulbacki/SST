@@ -12,6 +12,6 @@
             <Label text="Prevoius: "></Label>
             <Label [text]="stock.previous" class="bolded"></Label>
     </StackLayout>
-    <Button text="Add" col="2" horizontalAlignment="right" ></Button>
+    <Button text="Add" col="2" horizontalAlignment="right" (tap)="trackStock()" *ngIf="showAddBtn"></Button>
     </GridLayout>
 </CardView>
