@@ -1,0 +1,8 @@
+<ActionBar title="My Tracked Stocks"></ActionBar>
+
+<StackLayout>
+    <StackLayout orientation="vertical" *ngFor="let item of stockList">
+        <stock-card [(stock)]="item" [(showAddBtn)]="isAdd"></stock-card>
+    </StackLayout>
+</StackLayout>
+

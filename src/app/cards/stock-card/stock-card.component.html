@@ -1,0 +1,17 @@
+<CardView class="cardStyle" margin="10" elevation="40" radius="1">
+    <GridLayout rows="auto" columns="*,*,*" width="100%">
+    <StackLayout col="0">
+        <Label text="Symbol: "></Label>
+        <Label [text]="stock.symbol" class="bolded"></Label>
+        <Label text="Current Price: "></Label>
+        <Label [text]="stock.price" class="bolded"></Label>
+    </StackLayout>
+    <StackLayout col="1">
+            <Label text="Change: "></Label>
+            <Label [text]="stock.changePercent" class="bolded"></Label>
+            <Label text="Prevoius: "></Label>
+            <Label [text]="stock.previous" class="bolded"></Label>
+    </StackLayout>
+    <Button text="Add" col="2" horizontalAlignment="right" (tap)="trackStock()" *ngIf="showAddBtn"></Button>
+    </GridLayout>
+</CardView>
