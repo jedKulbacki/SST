@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { registerElement } from 'nativescript-angular/element-registry';
+import { registerElement } from '@nativescript/angular';
 import { CardView} from '@nstudio/nativescript-cardview';
 import { Stock } from '~/app/shared/stock/stock.model';
 import { StockService } from '~/app/shared/stock/stock.service';

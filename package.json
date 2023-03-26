@@ -5,7 +5,6 @@
   "name": "SST",
   "displayName": "SST App",
   "dependencies": {
-    "zone.js": "~0.12.0",
     "@angular/animations": "~15.1.0",
     "@angular/common": "~15.1.0",
     "@angular/compiler": "~15.1.0",
@@ -18,9 +17,11 @@
     "@nativescript/core": "~8.4.0",
     "@nativescript/theme": "~3.0.2",
     "@nativescript/unit-test-runner": "^3.0.4",
+    "@nstudio/nativescript-cardview": "^2.0.2",
     "nativescript-ui-sidedrawer": "~14.2.1",
     "reflect-metadata": "~0.1.12",
-    "rxjs": "~7.6.0"
+    "rxjs": "~7.6.0",
+    "zone.js": "~0.12.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~15.1.0",

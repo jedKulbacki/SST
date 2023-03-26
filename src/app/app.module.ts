@@ -1,5 +1,5 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptModule } from "@nativescript/angular";
+import { NativeScriptModule, NativeScriptFormsModule, NativeScriptHttpClientModule } from "@nativescript/angular";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./item/items.component";
@@ -11,10 +11,8 @@ import { SearchComponent } from "./shared/search/search.component";
 import { StockCardComponent } from "./cards/stock-card/stock-card.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
-import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper
-import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { SearchService } from "./shared/search/search.service";
 import { StockService } from "./shared/stock/stock.service";
 

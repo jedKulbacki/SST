@@ -1,7 +1,7 @@
 import { Component, OnInit} from "@angular/core";
 import { Observable, Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
-import { SearchBar } from "tns-core-modules/ui/search-bar";
+import { SearchBar } from "@nativescript/core";
 import { SearchService } from "./search.service";
 import { Stock } from "../stock/stock.model";
 import {StockCardComponent} from "../../cards/stock-card/stock-card.component";
@@ -38,8 +38,8 @@ export class SearchComponent{
     onSoftSubmit(args){
         let searchBar = <SearchBar>args.object;
         console.log('soft submitted ', searchBar.text);
-        this.searchService.findStockQuote(searchBar.text)
-            .subscribe(result => {
+        this.searchService.getJsonData()
+            .then(result => {
                 console.log('Api message ', result);
                 this.stockToAdd = new Stock(result);
                 this.isStockFound = true;

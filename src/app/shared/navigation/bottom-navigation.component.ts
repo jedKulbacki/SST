@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {Router} from "@angular/router";
-import {RouterExtensions} from "nativescript-angular/router";
+import {RouterExtensions} from "@nativescript/angular";
 
 @Component({
     selector: "app-bottom-navigation",
