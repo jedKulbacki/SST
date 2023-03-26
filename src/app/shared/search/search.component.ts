@@ -38,7 +38,7 @@ export class SearchComponent{
     onSoftSubmit(args){
         let searchBar = <SearchBar>args.object;
         console.log('soft submitted ', searchBar.text);
-        this.searchService.getJsonData()
+        this.searchService.findStockQuote(searchBar.text)
             .then(result => {
                 console.log('Api message ', result);
                 this.stockToAdd = new Stock(result);

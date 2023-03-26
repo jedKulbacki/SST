@@ -14,12 +14,13 @@ export class SearchService {
 
     }
 
-    findStockQuote(stockSymbol: string): Observable<any>{
+    findStockQuote(stockSymbol: string): Promise<any>{
         let parameters = new HttpParams()
             .set("function", "GLOBAL_QUOTE")
             .set("symbol", stockSymbol)
             .set("apikey", this.stockAPIKey);
-        return this.http.get(this.quoteEndpoint, {params: parameters});
+        console.log(parameters.toString());
+        return Http.getJSON("https://www.alphavantage.co/query?" + parameters.toString());
     } 
 
     getDemoData(): Observable<any>{
