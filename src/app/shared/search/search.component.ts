@@ -1,4 +1,4 @@
-import { Component, OnInit} from "@angular/core";
+import { Component, OnInit, NgZone} from "@angular/core";
 import { Observable, Subject } from "rxjs";
 import { debounceTime, distinctUntilChanged, map } from "rxjs/operators";
 import { SearchBar } from "@nativescript/core";
@@ -18,7 +18,7 @@ export class SearchComponent{
     stockToAdd: Stock;
     isStockFound: boolean;
     isAdd: boolean;
-    constructor(private searchService: SearchService){
+    constructor(private searchService: SearchService, private zone: NgZone){
         this.searchUpdate = new Subject<string>();
         this.isStockFound = false;
         this.isAdd = true;
@@ -40,9 +40,11 @@ export class SearchComponent{
         console.log('soft submitted ', searchBar.text);
         this.searchService.findStockQuote(searchBar.text)
             .then(result => {
-                console.log('Api message ', result);
                 this.stockToAdd = new Stock(result);
-                this.isStockFound = true;
+                this.zone.run(() => {
+                    this.isStockFound = true;
+                });
+                
             });
     }
 

@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, NgZone} from "@angular/core";
 import {Router} from "@angular/router";
 import {RouterExtensions} from "@nativescript/angular";
 
@@ -9,15 +9,16 @@ import {RouterExtensions} from "@nativescript/angular";
 })
 export class BottomNavigationComponent{
     constructor(private router: Router,
-		private routerExtensions: RouterExtensions) {}
+		private routerExtensions: RouterExtensions,
+        private zone: NgZone) {}
     
         onNavItemTap(navItemRoute: string): void {
-            this.routerExtensions.navigate([navItemRoute], {
+            this.zone.run(() => {this.routerExtensions.navigate([navItemRoute], {
                 transition: {
                     name: "fade"
                 },
                 clearHistory: true
-            });
+            });});
         }
     
 }

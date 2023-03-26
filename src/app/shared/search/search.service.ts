@@ -19,7 +19,6 @@ export class SearchService {
             .set("function", "GLOBAL_QUOTE")
             .set("symbol", stockSymbol)
             .set("apikey", this.stockAPIKey);
-        console.log(parameters.toString());
         return Http.getJSON("https://www.alphavantage.co/query?" + parameters.toString());
     } 
 

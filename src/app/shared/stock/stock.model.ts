@@ -24,10 +24,16 @@ export class Stock {
   public previous: number;
   public changePercent: string;
   constructor(json: any) {
-    console.log('this is my json ' + json['Global Quote']['01. symbol']);
+    if(!json) {
+      this.symbol = "F";
+      this.price = 11.5;
+      this.previous = 11.42;
+      this.changePercent = "0.78%";
+      return;
+    }
     this.symbol = json['Global Quote']['01. symbol'];
-    this.price = json['Global Quote']['05. price'];
-    this.previous = json['Global Quote']['08. previous close'];
+    this.price = Number(json['Global Quote']['05. price']);
+    this.previous = Number(json['Global Quote']['08. previous close']);
     this.changePercent = json['Global Quote']['10. change percent'];
   }
   
